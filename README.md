@@ -30,6 +30,7 @@ Note:
 ## Tag latest
 
 - add Fake SQS
+- install ruby-full
 - MIT license
 
 # Build
