@@ -24,6 +24,7 @@ Execute:
 Note:
 - Data file are localized under /srv/fake-sqs
 
+Read https://github.com/iain/fake_sqs for more information about 'fake sqs'.
 
 # Change Log
 
