@@ -1,4 +1,4 @@
-# Fake SQS
+# Fake SQS [![](https://badge.imagelayers.io/airdock/fake-sqs:latest.svg)](https://imagelayers.io/?images=airdock/fake-sqs:latest 'Get your own badge on imagelayers.io')
 
 Docker Image for [Fake SQS](https://github.com/iain/fake_sqs) based on airdock/base:latest
 
