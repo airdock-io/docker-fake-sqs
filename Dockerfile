@@ -9,7 +9,7 @@ MAINTAINER Jerome Guibert <jguibert@gmail.com>
 
 RUN apt-get update -qq && apt-get install -y ruby-full && \
    mkdir -p /opt/fake-sqs && cd /opt/fake-sqs && \
-   mkdir -p /svr/fake-sqs && \
+   mkdir -p /srv/fake-sqs && \
    gem install fake_sqs && \
   /root/post-install
 
