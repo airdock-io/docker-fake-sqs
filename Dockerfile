@@ -15,4 +15,4 @@ RUN apt-get update -qq && apt-get install -y ruby-full && \
 
 EXPOSE 4568
 
-CMD ["fake_sqs",  "--database" , "/svr/fake-sqs/database.yml"]
+CMD ["fake_sqs",  "--database" , "/srv/fake-sqs/database.yml"]
