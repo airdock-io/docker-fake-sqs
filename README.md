@@ -1,16 +1,14 @@
-# Fake SQS [![](https://badge.imagelayers.io/airdock/fake-sqs:latest.svg)](https://imagelayers.io/?images=airdock/fake-sqs:latest 'Get your own badge on imagelayers.io')
+# Fake SQS [![](https://images.microbadger.com/badges/image/airdock/fake-sqs:latest.svg)](https://microbadger.com/images/airdock/fake-sqs:latest "Get your own image badge on microbadger.com")
 
-Docker Image for [Fake SQS](https://github.com/iain/fake_sqs) based on airdock/base:latest
+Docker Image for [Fake SQS](https://github.com/iain/fake_sqs) based on airdock/rvm:latest
 
 Purpose of this image is:
 
 - install [Fake SQS](https://github.com/iain/fake_sqs)
-- based on airdock/oracle-jdk:latest (debian)
+- based on [airdock/rvm:latest](https://github.com/airdock-io/docker-rvm)
 
 
 > Name: airdock/fake-sqs
-
-***Dependencies***: airdock/base:latest
 
 
 # Usage
@@ -28,7 +26,10 @@ Read https://github.com/iain/fake_sqs for more information about 'fake sqs'.
 
 # Change Log
 
-## Tag latest
+## 2012/12/21
+- install rvm and ruby (newer version is needed for fake-sqs)
+
+## before
 
 - add Fake SQS
 - install ruby-full

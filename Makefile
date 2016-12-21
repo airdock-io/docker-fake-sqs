@@ -1,5 +1,5 @@
 NAME = airdock/fake-sqs
-VERSION = 1.0
+VERSION = dev
 
 .PHONY: all clean build tag_latest release debug run
 

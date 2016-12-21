@@ -4,13 +4,13 @@
 # TO_BUILD:       docker build --rm -t airdock/fake-sqs .
 # SOURCE:         https://github.com/airdock-io/docker-fake-sqs
 
-FROM airdock/base:latest
+FROM airdock/rvm:latest
 MAINTAINER Jerome Guibert <jguibert@gmail.com>
 
-RUN apt-get update -qq && apt-get install -y ruby-full && \
-   mkdir -p /opt/fake-sqs && cd /opt/fake-sqs && \
-   mkdir -p /srv/fake-sqs && \
-   gem install fake_sqs && \
+RUN source /usr/local/rvm/scripts/rvm && \
+  mkdir -p /opt/fake-sqs && cd /opt/fake-sqs && \
+  mkdir -p /srv/fake-sqs && \
+  gem install fake_sqs && \
   /root/post-install
 
 EXPOSE 4568
