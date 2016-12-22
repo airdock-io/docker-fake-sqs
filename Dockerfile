@@ -9,7 +9,7 @@ MAINTAINER Jerome Guibert <jguibert@gmail.com>
 
 RUN  mkdir -p /opt/fake-sqs && cd /opt/fake-sqs && \
   mkdir -p /srv/fake-sqs && \
-  rvm ruby-2.3 do gem install fake_sqs && \
+  rvm ruby-2.3 do gem install fake_sqs --no-ri --no-rdoc && \
   /root/post-install
 
 EXPOSE 4568
