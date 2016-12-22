@@ -4,15 +4,14 @@
 # TO_BUILD:       docker build --rm -t airdock/fake-sqs .
 # SOURCE:         https://github.com/airdock-io/docker-fake-sqs
 
-FROM airdock/rvm:latest
+FROM airdock/rvm:dev
 MAINTAINER Jerome Guibert <jguibert@gmail.com>
 
-RUN source /usr/local/rvm/scripts/rvm && \
-  mkdir -p /opt/fake-sqs && cd /opt/fake-sqs && \
+RUN  mkdir -p /opt/fake-sqs && cd /opt/fake-sqs && \
   mkdir -p /srv/fake-sqs && \
-  gem install fake_sqs && \
+  rvm ruby-2.3 do gem install fake_sqs && \
   /root/post-install
 
 EXPOSE 4568
 
-CMD ["fake_sqs",  "--database" , "/srv/fake-sqs/database.yml"]
+CMD ["rvm ruby-2.3 do fake_sqs --database /srv/fake-sqs/database.yml"]

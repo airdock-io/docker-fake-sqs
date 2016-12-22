@@ -17,7 +17,7 @@ You should have already install [Docker](https://www.docker.com/).
 
 Execute:
 
-		docker run -d -p 4568:4568 --name node airdock/fake-sqs
+		docker run -d -p 4568:4568 --name fake-sqs airdock/fake-sqs
 
 Note:
 - Data file are localized under /srv/fake-sqs
