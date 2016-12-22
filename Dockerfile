@@ -14,4 +14,4 @@ RUN  mkdir -p /opt/fake-sqs && cd /opt/fake-sqs && \
 
 EXPOSE 4568
 
-CMD ["rvm ruby-2.3 do fake_sqs --database /srv/fake-sqs/database.yml"]
+CMD ["rvm", "ruby-2.3", "do", "fake_sqs", "--database", "/srv/fake-sqs/database.yml"]
