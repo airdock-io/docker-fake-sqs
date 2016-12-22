@@ -5,6 +5,7 @@ Docker Image for [Fake SQS](https://github.com/iain/fake_sqs) based on airdock/r
 Purpose of this image is:
 
 - install [Fake SQS](https://github.com/iain/fake_sqs)
+- run with ruby:ruby user account
 - based on [airdock/rvm:latest](https://github.com/airdock-io/docker-rvm)
 
 
@@ -15,19 +16,23 @@ Purpose of this image is:
 
 You should have already install [Docker](https://www.docker.com/).
 
-Execute:
+Launch as service:
 
+```
 		docker run -d -p 4568:4568 --name fake-sqs airdock/fake-sqs
+```
+This instance listen on port 4468 and persist data under /srv/ruby/fake-sqs
 
-Note:
-- Data file are localized under /srv/fake-sqs
-
+You could mount a volume on /srv/ruby/fake-sqs in order to store/load data.
+```
+   docker run -v /some/fake/sqs:/srv/ruby/fake-sqs:rw  -d -p 4568:4568 --name fake-sqs airdock/fake-sqs
+```
 Read https://github.com/iain/fake_sqs for more information about 'fake sqs'.
 
 # Change Log
 
-## 2012/12/21
-- install rvm and ruby (newer version is needed for fake-sqs)
+## current
+- install fake-sqs as ruby user
 
 ## before
 

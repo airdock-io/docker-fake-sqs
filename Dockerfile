@@ -7,11 +7,15 @@
 FROM airdock/rvm:latest
 MAINTAINER Jerome Guibert <jguibert@gmail.com>
 
-RUN  mkdir -p /opt/fake-sqs && cd /opt/fake-sqs && \
-  mkdir -p /srv/fake-sqs && \
-  rvm ruby-2.3 do gem install fake_sqs --no-ri --no-rdoc && \
-  /root/post-install
+USER ruby
+
+RUN mkdir -p /srv/ruby/fake-sqs && cd /srv/ruby/fake-sqs && \
+  rvm ruby-2.3 do gem install fake_sqs --no-ri --no-rdoc
+
+USER root
 
 EXPOSE 4568
 
-CMD ["rvm", "ruby-2.3", "do", "fake_sqs", "--database", "/srv/fake-sqs/database.yml"]
+VOLUME ["/srv/ruby/fake-sqs"]
+
+CMD ["tini", "-g", "--", "gosu", "ruby:ruby", "rvm", "ruby-2.3", "do", "fake_sqs", "--database", "/srv/ruby/fake-sqs/database.yml"]
