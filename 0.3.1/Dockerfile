@@ -6,11 +6,11 @@
 
 FROM airdock/rvm:latest
 MAINTAINER Jerome Guibert <jguibert@gmail.com>
-
+ARG FAKE_SQS_VERSION=0.3.1
 USER ruby
 
 RUN mkdir -p /srv/ruby/fake-sqs && cd /srv/ruby/fake-sqs && \
-  rvm ruby-2.3 do gem install fake_sqs --no-ri --no-rdoc
+  rvm ruby-2.3 do gem install fake_sqs -v ${FAKE_SQS_VERSION} --no-ri --no-rdoc
 
 USER root
 
