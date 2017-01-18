@@ -11,6 +11,13 @@ Purpose of this image is:
 
 > Name: airdock/fake-sqs
 
+# Tag
+
+* latest, 0.3.1: fake SQS 0.3.1 [![](https://images.microbadger.com/badges/image/airdock/fake-sqs:latest.svg)](https://microbadger.com/images/airdock/fake-sqs:latest "Get your own image badge on microbadger.com")
+* 0.3.0: fake SQS 0.3.0 [![](https://images.microbadger.com/badges/image/airdock/fake-sqs:0.3.0.svg)](https://microbadger.com/images/airdock/fake-sqs:0.3.0 "Get your own image badge on microbadger.com")
+* 0.2.0: fake SQS 0.2.0 [![](https://images.microbadger.com/badges/image/airdock/fake-sqs:0.2.0.svg)](https://microbadger.com/images/airdock/fake-sqs:0.2.0 "Get your own image badge on microbadger.com")
+* 0.1.0: fake SQS 0.1.0 [![](https://images.microbadger.com/badges/image/airdock/fake-sqs:0.1.0.svg)](https://microbadger.com/images/airdock/fake-sqs:0.1.0 "Get your own image badge on microbadger.com")
+
 
 # Usage
 
@@ -31,17 +38,23 @@ Read https://github.com/iain/fake_sqs for more information about 'fake sqs'.
 
 # Change Log
 
-## current
+## latest, 0.3.1, 0.3.0
+
 - install fake-sqs as ruby user
-
-## before
-
-- add Fake SQS
-- install ruby-full
+- based on airdock/rvm
 - MIT license
 
-# Build
+## 0.2.0, 0.1.0
 
+- Fix Fake SQS dependency [mustermann](http://www.sinatrarb.com/mustermann/) required ruby >= 2.2
+- add Fake SQS
+- install ruby-full
+- based on airdock/base
+- run as root user
+- MIT license
+
+
+# Build
 
 - Install "make" utility, and execute: `make build`
 - Or execute: 'docker build -t airdock/fake-sqs:latest --rm .'
